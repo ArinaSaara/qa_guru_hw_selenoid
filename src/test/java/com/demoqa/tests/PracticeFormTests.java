@@ -22,7 +22,7 @@ public class PracticeFormTests extends TestBase {
     void testCanFillPracticeForm() {
         Faker faker = new Faker();
         Student expectedStudent = new Student(faker.name().firstName(), faker.name().lastName(), faker.internet().emailAddress(), faker.options().option(Gender.class), faker.phoneNumber().subscriberNumber(10),
-                LocalDate.of(2000, 3, 11), faker.options().option(Subject.class), faker.options().option(Hobby.class), "image.jpg", faker.address().fullAddress(), "NCR", "Delhi");
+                LocalDate.of(2000, 3, 11), faker.options().option(Subject.class), faker.options().option(Hobby.class), "1.png", faker.address().fullAddress(), "NCR", "Delhi");
 
         step("Fill Student Registration Form", () -> {
             practiceForm.openPage()
@@ -34,7 +34,7 @@ public class PracticeFormTests extends TestBase {
                     .selectDateOfBirthday(expectedStudent.getMonthAsNumber(), expectedStudent.getYear(), expectedStudent.getDay())
                     .enterSubject(expectedStudent.getSubject())
                     .checkHobby(expectedStudent.getHobby())
-                    .uploadImage(expectedStudent.getImage("files/"))
+                    .uploadImage(expectedStudent.getImage())
                     .enterAddress(expectedStudent.getAddress())
                     .selectStateAndCity(expectedStudent.getState(), expectedStudent.getCity())
                     .clickOnCreateStudentButton();

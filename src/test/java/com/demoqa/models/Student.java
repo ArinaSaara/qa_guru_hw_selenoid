@@ -53,8 +53,8 @@ public class Student {
         return imageName;
     }
 
-    public String getImage(String path) {
-        return path + imageName;
+    public String getImage() {
+        return "img/" + imageName;
     }
 
     public String getState() {
