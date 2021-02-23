@@ -34,7 +34,7 @@ public class PracticeFormTests extends TestBase {
                     .selectDateOfBirthday(expectedStudent.getMonthAsNumber(), expectedStudent.getYear(), expectedStudent.getDay())
                     .enterSubject(expectedStudent.getSubject())
                     .checkHobby(expectedStudent.getHobby())
-                    .uploadImage(expectedStudent.getImage("src/test/resources/files/"))
+                    .uploadImage(expectedStudent.getImage("files/"))
                     .enterAddress(expectedStudent.getAddress())
                     .selectStateAndCity(expectedStudent.getState(), expectedStudent.getCity())
                     .clickOnCreateStudentButton();
