@@ -34,7 +34,7 @@ public class PracticeFormTests extends TestBase {
                     .selectDateOfBirthday(expectedStudent.getMonthAsNumber(), expectedStudent.getYear(), expectedStudent.getDay())
                     .enterSubject(expectedStudent.getSubject())
                     .checkHobby(expectedStudent.getHobby())
-                    .uploadImage(expectedStudent.getImage("files/"))
+                    //.uploadImage(expectedStudent.getImage("files/"))
                     .enterAddress(expectedStudent.getAddress())
                     .selectStateAndCity(expectedStudent.getState(), expectedStudent.getCity())
                     .clickOnCreateStudentButton();
@@ -49,7 +49,7 @@ public class PracticeFormTests extends TestBase {
             thankYouPage.verifyRowValue("Date of Birth", expectedStudent.getDateOfBirthday());
             thankYouPage.verifyRowValue("Subjects", expectedStudent.getSubject());
             thankYouPage.verifyRowValue("Hobbies", expectedStudent.getHobby());
-            thankYouPage.verifyRowValue("Picture", expectedStudent.getImageName());
+           // thankYouPage.verifyRowValue("Picture", expectedStudent.getImageName());
             thankYouPage.verifyRowValue("State and City", expectedStudent.getLocation());
         });
     }
